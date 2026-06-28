@@ -17,4 +17,4 @@
 
 - 정부 지원사업 세부 내용은 연도별 변동 가능성이 있어 최신 공고 확인 안내를 명시함.
 - 로컬 서버 `http://localhost:4173`에서 브라우저 검수 완료: 첫 슬라이드와 실습 웹앱 모두 화면 내 피팅 정상, 콘솔 오류 0개.
-- GitHub Pages 배포 후 실제 URL 접근 확인 필요.
+- GitHub Pages 배포 완료 및 실제 URL 접근 확인: https://gottagitgethub.github.io/kfba-ai-economy-lecture/
