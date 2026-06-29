@@ -10,8 +10,9 @@ for (const token of required) {
 }
 const slideCount = (html.match(/<section class="slide/g) || []).length;
 if (slideCount < 30) failures.push(`slide count ${slideCount} < 30`);
-const tabs = ['policyTab','agentTab','reviewTab','researchTab','planTab'];
-for (const id of tabs) if (!html.includes(id)) failures.push(`missing tab: ${id}`);
+const lectureTokens = ['충남경제교육센터 유정재 강사','GPT 또는 Gemini','실제 공고문','2025년 소상공인 스마트상점 기술보급사업'];
+for (const token of lectureTokens) if (!html.includes(token)) failures.push(`missing lecture token: ${token}`);
+if (html.includes('id="practice"') || html.includes('실습 웹앱</button>')) failures.push('embedded practice app still present in lecture deck');
 const navTokens = ['ArrowRight','ArrowLeft','localStorage','requestFullscreen'];
 for (const token of navTokens) if (!html.includes(token)) failures.push(`missing navigation feature: ${token}`);
 const bad = html.match(/TODO|lorem ipsum|undefined/g);
@@ -21,4 +22,4 @@ if (failures.length) {
   for (const f of failures) console.error('- '+f);
   process.exit(1);
 }
-console.log(`CHECK OK — ${slideCount} slides, ${tabs.length} practice tabs, SOT present.`);
+console.log(`CHECK OK — ${slideCount} slides, lecture deck separated from practice app, SOT present.`);
