@@ -394,3 +394,19 @@
 - 검증 결과: 강의자료 `npm run check` 통과 (`CHECK OK — 41 slides, lecture deck separated from practice app, SOT present.`). 지원사업 플레이북 `npm run check` 통과 (`CHECK OK — support playbook has 8 program cards, keyboard/localStorage/fullscreen, and prompt generator.`).
 - 수정사항: 신규 오류/미구현/불일치 없음. 본 점검 결과만 보고서에 누적 기록.
 - HITL_REQUIRED: 실제 신청 전에는 각 지원사업의 해당 연도 원문 공고 자격요건/마감일 확인 필요.
+
+## 2026-06-29 03:42 KST 10분 루프 점검
+
+- SOT/구현 비교: `docs/SOT.md`, `docs/qa-report.md`, `index.html`, `scripts/check.js`, `README.md`, `docs/research-support-programs.json` 및 별도 지원사업 실전 웹앱 `C:/c/CreatorOS/kfba-support-program-playbook`의 `index.html`, `scripts/check.js`, `README.md` 대조 완료.
+- SOT 요구사항 충족 여부: 강의자료는 정적 웹 슬라이드 앱, GitHub Pages 배포, Gucci Harness 보고서 누적, 강의자료/실습·지원사업 웹앱 분리 구조 유지 확인.
+- 40장 이상 슬라이드: 완료 (`npm run check` 기준 41 slides, 브라우저에서 `2 / 41`, `localStorage kfba-slide=1` 확인).
+- 지원사업 예시 포함: 완료 (강한 소상공인 성장지원, 로컬크리에이터, 스마트상점, 온라인 플랫폼/판로·스마트물류, 희망리턴패키지, 소공인 클린제조환경조성 확인).
+- 각 지원사업의 제목·핵심내용·외식업 선발전략·신청서 작성 방향: 강의자료 슬라이드 및 별도 플레이북 8개 카드/신청서 프롬프트에서 확인.
+- 강의자료와 실습/지원사업 웹앱 분리: 강의자료에는 임베디드 실습 앱 없음, README에 별도 지원사업 플레이북 URL/프로젝트 경로 명시 확인.
+- 키보드 내비게이션/localStorage/전체화면: 강의자료는 ←/→/Space/Home/End, `kfba-slide`, `requestFullscreen` 확인. 별도 플레이북은 ←/→, 1–8, F, `support-playbook-filter`, 전체화면, 프롬프트 생성 확인.
+- 개인정보·비밀값 미노출: 비밀값 패턴 검색 결과 실제 노출 없음. `registry-auth-token`은 npm 패키지명이며 실제 비밀값 아님. 개인정보/API 키 입력 금지 및 자격요건 단정 금지 안내 유지.
+- 브라우저 검수: 로컬 강의자료 `http://localhost:4173/` HTTP 200, 콘솔 오류 0개. 별도 플레이북 `http://localhost:4175/` HTTP 200, 콘솔 오류 0개, 물류 필터 키보드 이동 및 프롬프트 생성 함수 확인.
+- 배포 URL 접근: `https://gottagitgethub.github.io/kfba-ai-economy-lecture/` HTTP 200, `https://gottagitgethub.github.io/kfba-support-program-playbook/` HTTP 200 확인.
+- 검증 결과: 강의자료 `npm run check` 통과 (`CHECK OK — 41 slides, lecture deck separated from practice app, SOT present.`). 지원사업 플레이북 `npm run check` 통과 (`CHECK OK — support playbook has 8 program cards, keyboard/localStorage/fullscreen, and prompt generator.`).
+- 수정사항: 별도 지원사업 플레이북의 스마트물류 카드가 별도 필터/숫자 단축키에서 누락된 불일치를 수정하고, `scripts/check.js`에 물류 필터와 1–8 단축키 검사를 추가.
+- HITL_REQUIRED: 실제 신청 전에는 각 지원사업의 해당 연도 원문 공고 자격요건/마감일 확인 필요.
