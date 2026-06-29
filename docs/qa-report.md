@@ -458,3 +458,10 @@
 - 검증 결과: 강의자료 `npm run check` 통과 (`CHECK OK — 41 slides, lecture deck separated from practice app, SOT present.`). 지원사업 플레이북 `npm run check` 통과 (`CHECK OK — support playbook has 8 program cards, keyboard/localStorage/fullscreen, and prompt generator.`).
 - 수정사항: 신규 오류/미구현/불일치 없음. 본 점검 결과만 보고서에 누적 기록.
 - HITL_REQUIRED: 실제 신청 전에는 각 지원사업의 해당 연도 원문 공고 자격요건/마감일 확인 필요.
+
+
+## 2026-06-29 시니어 친화 쉬운 지원정책 보강
+
+- 전기요금/에너지, 카드수수료, 배달·택배비, 노란우산, 풍수해·화재보험, 정책자금 기본 안내를 슬라이드에 추가.
+- 중장년·시니어 수강생을 위해 신청 절차를 사진→서류→견적→전화확인→접수 5단계로 단순화.
+- 지역·시니어 친화 지원 검색 근거는 `docs/research-easy-senior-supports.json`에 저장.
