@@ -493,3 +493,20 @@
 - 검증 결과: 강의자료 `npm run check` 통과 (`CHECK OK — 50 slides, lecture deck separated from practice app, SOT present.`). 지원사업 플레이북 `npm run check` 통과 (`CHECK OK — support playbook has 16 program cards, required examples, senior-friendly 5 steps, keyboard/localStorage/fullscreen, and application draft.`).
 - 수정사항: 강의자료 쉬운 신청 5단계 용어 명확화, 별도 지원사업 플레이북을 16개 필수 지원사업 카드/키보드·localStorage·전체화면/엄격 점검 스크립트/README로 보강.
 - HITL_REQUIRED: 실제 신청 전에는 각 지원사업의 해당 연도·시군 원문 공고 자격요건·마감일·지원한도·제외업종 확인 필요.
+
+## 2026-06-29 13:57 KST 10분 루프 점검
+
+- SOT/구현 비교: `docs/SOT.md`, `docs/qa-report.md`, `index.html`, `scripts/check.js`, `README.md`, `docs/research-support-programs.json`, `docs/research-regional-support-programs.json`, `docs/research-easy-senior-supports.json` 및 별도 지원사업 실전 웹앱 `C:/c/CreatorOS/kfba-support-program-playbook`의 `index.html`, `scripts/check.js`, `README.md` 대조 완료.
+- SOT 요구사항 충족 여부: 강의자료는 16:9 전체화면 발표용 정적 웹 슬라이드 앱, GitHub Pages 배포 구조, Gucci Harness 보고서 누적, 강의자료/실습·지원사업 웹앱 분리 구조 유지 확인.
+- 49장 이상 슬라이드: 완료 (`npm run check` 및 브라우저 DOM 기준 50 slides, 브라우저에서 → 이동 후 `2 / 50`, `localStorage kfba-slide=1` 확인).
+- 지원사업 예시 포함: 완료 (강한 소상공인 성장지원, 로컬크리에이터, 스마트상점, 온라인 판로·물류, 희망리턴패키지, 클린제조환경, 충남 사회보험료, 충남 온라인 플랫폼 판로지원, 시군 경영환경개선, 음식점 위생·입식탁자·조리장 개선, 전기요금·에너지, 카드수수료, 배달·택배비, 노란우산, 풍수해·화재보험, 정책자금 기본안내 확인).
+- 각 지원사업의 제목·핵심내용·외식업 선발전략·신청서 작성 방향: 강의자료 및 별도 플레이북 16개 카드/신청서 초안 프롬프트에서 확인.
+- 중장년·시니어 친화 쉬운 신청 5단계: 강의자료와 별도 플레이북 모두 `사진 → 기본서류 → 견적 → 전화 확인 → 방문/온라인 접수` 취지로 확인.
+- 강의자료와 실습/지원사업 웹앱 분리: 강의자료 내부 임베디드 실습 앱 없음, 별도 지원사업 플레이북 URL/프로젝트 경로 유지.
+- 키보드 내비게이션/localStorage/전체화면: 강의자료는 ←/→/Space/Home/End, `kfba-slide`, `requestFullscreen` 확인. 별도 플레이북은 ←/→, 1–9, F, `support-playbook-filter`, 전체화면, 맞춤 추천/신청서 초안 기능 확인.
+- 개인정보·비밀값 미노출: 양 프로젝트 주요 구현 파일 비밀값 패턴 검색 결과 노출 없음. 개인정보/API 키 입력 금지 및 자격요건 단정 금지 안내 유지.
+- 브라우저 검수: 로컬 강의자료 `http://127.0.0.1:4173/` HTTP 200, 콘솔 오류 0개. 별도 플레이북 `http://127.0.0.1:4175/` HTTP 200, 콘솔 오류 0개, 분류 키보드 이동 후 `support-playbook-filter=성장` 저장 확인.
+- 배포 URL 접근: `https://gottagitgethub.github.io/kfba-ai-economy-lecture/` HTTP 200, `https://gottagitgethub.github.io/kfba-support-program-playbook/` HTTP 200 확인.
+- 검증 결과: 강의자료 `npm run check` 통과 (`CHECK OK — 50 slides, lecture deck separated from practice app, SOT present.`). 지원사업 플레이북 `npm run check` 통과 (`CHECK OK — support playbook has 16 program cards, required examples, senior-friendly 5 steps, keyboard/localStorage/fullscreen, and application draft.`).
+- 수정사항: 신규 오류/미구현/불일치 없음. 본 점검 결과만 보고서에 누적 기록.
+- HITL_REQUIRED: 실제 신청 전에는 각 지원사업의 해당 연도·시군 원문 공고 자격요건·마감일·지원한도·제외업종 확인 필요.
