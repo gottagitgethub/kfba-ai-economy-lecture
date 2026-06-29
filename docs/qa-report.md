@@ -347,3 +347,18 @@
 - 지원사업 실전 웹앱 별도 제작/배포 확인: https://gottagitgethub.github.io/kfba-support-program-playbook/
 - 브라우저 콘솔 오류: 강의자료 0개, 지원사업 실전 웹앱 0개.
 - HITL_REQUIRED: 실제 신청 전에는 각 지원사업의 해당 연도 원문 공고 자격요건/마감일 확인 필요.
+
+## 2026-06-29 11:58 KST 10분 루프 점검
+
+- SOT/구현 비교: `docs/SOT.md`, `docs/qa-report.md`, `index.html`, `scripts/check.js`, `README.md`, `docs/research-support-programs.json` 및 별도 지원사업 실전 웹앱 `C:/c/CreatorOS/kfba-support-program-playbook`의 `index.html`, `scripts/check.js`, `README.md` 대조 완료.
+- 40장 이상 슬라이드: 완료 (`npm run check` 기준 41 slides).
+- 지원사업 예시 포함: 완료 (강한 소상공인 성장지원, 로컬크리에이터, 스마트상점, 온라인 플랫폼/판로·스마트물류, 희망리턴패키지, 소공인 클린제조환경조성 확인).
+- 각 지원사업의 제목·핵심내용·외식업 선발전략·신청서 작성 방향: 강의자료 및 별도 플레이북 카드/프롬프트에서 확인.
+- 강의자료와 실습/지원사업 웹앱 분리: 강의자료 본문은 슬라이드 전용으로 유지, README의 과거 “슬라이드+실습 웹앱” 문구를 별도 프로젝트/URL 안내로 수정.
+- 키보드 내비게이션/localStorage/전체화면: 강의자료는 ←/→/Space/Home/End, `kfba-slide`, 전체화면 확인. 별도 지원사업 플레이북에는 분류 키보드 이동(←/→, 1–7), `support-playbook-filter`, 전체화면 버튼을 추가.
+- 개인정보·비밀값 미노출: 비밀값 패턴 검색 결과 실제 노출 없음. 개인정보/API 키 입력 금지 및 자격요건 단정 금지 안내 유지.
+- 브라우저 검수: 로컬 강의자료 `http://localhost:4173/` HTTP 200, 콘솔 오류 0개, → 이동 후 `2 / 41` 및 `localStorage kfba-slide=1` 확인. 별도 플레이북 `http://localhost:4175/` HTTP 200, 콘솔 오류 0개, → 이동 후 `support-playbook-filter=성장`, 프롬프트 생성 확인.
+- 배포 URL 접근: `https://gottagitgethub.github.io/kfba-ai-economy-lecture/` HTTP 200, `https://gottagitgethub.github.io/kfba-support-program-playbook/` HTTP 200 확인.
+- 검증 결과: 강의자료 `npm run check` 통과 (`CHECK OK — 41 slides, lecture deck separated from practice app, SOT present.`). 지원사업 플레이북 `npm run check` 통과 (`CHECK OK — support playbook has 8 program cards, keyboard/localStorage/fullscreen, and prompt generator.`).
+- 수정사항: 강의자료 README 분리 안내 정정, 지원사업 플레이북 키보드/localStorage/전체화면 기능 및 점검 스크립트 보강.
+- HITL_REQUIRED: 실제 신청 전에는 각 지원사업의 해당 연도 원문 공고 자격요건/마감일 확인 필요.
