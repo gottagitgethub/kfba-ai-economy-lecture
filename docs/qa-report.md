@@ -336,3 +336,14 @@
 - 인터넷 검색 결과를 `docs/research-support-programs.json`에 저장하고, 강한 소상공인/로컬크리에이터/스마트상점/온라인 판로/희망리턴/클린제조환경 등 실제 지원사업 예시를 슬라이드에 추가.
 - SOT를 10분 점검 루프, 40장 이상 슬라이드, 지원사업 실전 웹앱 요구사항으로 갱신.
 - 검증 예정: `npm run check`, 브라우저 콘솔, GitHub Pages 배포 확인.
+
+
+## 2026-06-29 지원사업 실전편 배포 검수
+
+- 강의자료 슬라이드 수: `npm run check` 기준 41 slides 통과.
+- 추가된 실제 지원사업 예시: 강한 소상공인 성장지원, 로컬크리에이터, 스마트상점 기술보급, 온라인 플랫폼/스마트물류/지역 판로, 희망리턴패키지, 소공인 클린제조환경조성.
+- 검색 근거 파일: `docs/research-support-programs.json` 저장.
+- 강의자료 GitHub Pages 배포 성공 및 브라우저 접속 확인: https://gottagitgethub.github.io/kfba-ai-economy-lecture/
+- 지원사업 실전 웹앱 별도 제작/배포 확인: https://gottagitgethub.github.io/kfba-support-program-playbook/
+- 브라우저 콘솔 오류: 강의자료 0개, 지원사업 실전 웹앱 0개.
+- HITL_REQUIRED: 실제 신청 전에는 각 지원사업의 해당 연도 원문 공고 자격요건/마감일 확인 필요.
