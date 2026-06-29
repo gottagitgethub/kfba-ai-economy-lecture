@@ -25,6 +25,8 @@ npm run check
 - `docs/SOT.md` — Source of Truth / 요구사항
 - `docs/qa-report.md` — 검수 및 Gucci Harness 점검 보고서
 - `docs/research-support-programs.json` — 지원사업 예시 조사 근거
+- `docs/research-regional-support-programs.json` — 충남/시군 지역 지원사업 조사 근거
+- `docs/research-easy-senior-supports.json` — 중장년·시니어 친화 쉬운 지원정책 조사 근거
 - `.github/workflows/pages.yml` — GitHub Pages 배포
 
 ## 별도 실습/지원사업 웹앱

@@ -9,7 +9,7 @@ for (const token of required) {
   if (!html.includes(token) && !sot.includes(token)) failures.push(`missing token: ${token}`);
 }
 const slideCount = (html.match(/<section class="slide/g) || []).length;
-if (slideCount < 49) failures.push(`slide count ${slideCount} < 40`);
+if (slideCount < 49) failures.push(`slide count ${slideCount} < 49`);
 const lectureTokens = ['충남경제교육센터 유정재 강사','GPT 또는 Gemini','실제 공고문','2025년 소상공인 스마트상점 기술보급사업'];
 for (const token of lectureTokens) if (!html.includes(token)) failures.push(`missing lecture token: ${token}`);
 if (html.includes('id="practice"') || html.includes('실습 웹앱</button>')) failures.push('embedded practice app still present in lecture deck');
