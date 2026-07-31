@@ -47,9 +47,10 @@ jobs:
 
       - name: Verify 74-page PDF
         run: |
+          pdfinfo investment-os/hermes-investment-os-lecture.pdf
           pages="$(pdfinfo investment-os/hermes-investment-os-lecture.pdf | awk '/^Pages:/ { print $2 }')"
+          echo "Generated $pages pages."
           test "$pages" = "74"
-          echo "Verified $pages pages."
 
       - name: Commit generated PDF
         run: |
@@ -64,6 +65,7 @@ jobs:
           git push
 
       - name: Upload PDF artifact
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: hermes-investment-os-lecture
